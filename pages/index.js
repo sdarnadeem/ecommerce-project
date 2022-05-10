@@ -1,6 +1,6 @@
 import React from "react";
 // prettier-ignore
-import {Footer, Layout, Navbar, Product, HeroBanner, FooterBanner, Cart} from '../components'
+import {  Product, HeroBanner, FooterBanner, Cart} from '../components'
 
 import { client } from "../lib/client";
 
