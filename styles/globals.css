@@ -91,6 +91,7 @@ span.text-red {
 }
 .logo-container {
   flex: 1;
+  cursor: pointer;
 }
 .logo {
   width: 150px;

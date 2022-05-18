@@ -9,10 +9,38 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
+  const [isLogged, setIsLogged] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      setIsLogged(true);
+      setUser(user);
+    }
+  }, []);
 
   let foundProduct;
   let index;
 
+  const onAuth = (user) => {
+    setIsLogged(true);
+
+    setUser(user);
+    localStorage.setItem("user", JSON.stringify(user));
+  };
+
+  const onLogout = () => {
+    setUser(null);
+    setIsLogged(false);
+
+    localStorage.removeItem("user");
+    document.cookie.split(";").forEach(function (c) {
+      document.cookie = c
+        .replace(/^ +/, "")
+        .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+    });
+  };
   const onAdd = (product, quantity) => {
     const checkProductInCart = cartItems.find(
       (item) => item._id === product._id
@@ -109,6 +137,10 @@ export const StateContext = ({ children }) => {
         setCartItems,
         setTotalPrice,
         setTotalQuantities,
+        onAuth,
+        user,
+        isLogged,
+        onLogout,
       }}
     >
       {children}

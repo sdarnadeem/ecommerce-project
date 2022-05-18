@@ -9,7 +9,7 @@ import Layout from "../components/Layout";
 import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }) {
-  NProgress.configure({ showSpinner: true });
+  NProgress.configure({ showSpinner: false, offsetWidth: "10px" });
 
   Router.events.on("routeChangeStart", () => {
     NProgress.start();
