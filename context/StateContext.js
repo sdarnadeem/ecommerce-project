@@ -16,7 +16,7 @@ export const StateContext = ({ children }) => {
     const user = localStorage.getItem("user");
     if (user) {
       setIsLogged(true);
-      setUser(user);
+      setUser(JSON.parse(user));
     }
   }, []);
 

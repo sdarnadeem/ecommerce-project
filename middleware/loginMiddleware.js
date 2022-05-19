@@ -21,8 +21,6 @@ const loginMiddleware = (handler) => {
 
       // 1) Check if the eamil and password exists
       if (!email || !password) {
-        console.log("Email check");
-        console.log(req.tokenVerified);
         res.status(401).json({
           status: "fail",
           message: "Please provide an email and password",
@@ -34,7 +32,6 @@ const loginMiddleware = (handler) => {
       const user = await User.findOne({ email }).select("+password");
 
       if (!user || !(await user.correctPassword(password, user.password))) {
-        console.log("User check");
         res.status(401).json({
           status: "fail",
           message: " Please provide correct email or password",
@@ -49,8 +46,6 @@ const loginMiddleware = (handler) => {
       //
       return handler(req, res);
     } catch (error) {
-      console.log("Error ran");
-      console.log(error);
       res.status(500).json({ status: "fail", message: error.message });
       return;
     }

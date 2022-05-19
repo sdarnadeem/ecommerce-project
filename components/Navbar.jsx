@@ -10,7 +10,7 @@ import { useStateContext } from "../context/StateContext";
 import Profile from "./Profile";
 
 const Navbar = () => {
-  const { showCart, setShowCart, totalQuantities } = useStateContext();
+  const { showCart, setShowCart, totalQuantities, user } = useStateContext();
   const [showProfile, setShowProfile] = useState(false);
 
   const handleProfileClick = () => {
@@ -35,6 +35,14 @@ const Navbar = () => {
       </button>
       {showCart && <Cart />}
       <div onClick={handleProfileClick} className="profile">
+        {user && user.image && (
+          <Image
+            layout="fill"
+            src={user.image}
+            alt="profile"
+            style={{ borderRadius: "50%" }}
+          />
+        )}
         {showProfile && <Profile />}
       </div>
     </div>

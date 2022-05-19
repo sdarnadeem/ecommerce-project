@@ -39,9 +39,11 @@ const Login = () => {
 
       const data = await response.json();
       setError(data.message);
+
       if (response.status === 302) {
         Router.replace("/");
-        onAuth(data.user);
+        onAuth(data.data.user);
+        console.log(data, response);
       }
     } catch (e) {
       // console.log(error);

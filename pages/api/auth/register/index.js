@@ -12,4 +12,12 @@ async function handler(req, res) {
   }
 }
 
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: "4mb", // Set desired value here
+    },
+  },
+};
+
 export default registerMiddleware(handler);
