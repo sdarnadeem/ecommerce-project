@@ -9,54 +9,44 @@ const Order = () => {
         <div className={c.product}>
           <div className="product">
             <img src={""} className="cart-product-image" />
-            <div className="item-desc">
-              <div className="flex top">
-                <h5>{"Dildo"}</h5>
-                <h4>${"50"}</h4>
-              </div>
-              <div className="flex bottom">
-                <div>
-                  <p className="quantity-desc">
-                    <span className="num">{12}</span>
-                  </p>
-                </div>
-              </div>
+            <div className={c.details}>
+              <h3>
+                Item Name: <span>Dilli</span>
+              </h3>
+              <h4>
+                Address: <span>Dilli</span>
+              </h4>
+              <h4>
+                Expected Delivery: <span>Dilli</span>
+              </h4>
+              <h4>
+                Price per item: <span>Dilli</span>
+              </h4>
+              <h4>
+                Number of items: <span>Dilli</span>
+              </h4>
             </div>
           </div>
         </div>
         <div className={c.product}>
           <div className="product">
             <img src={""} className="cart-product-image" />
-            <div className="item-desc">
-              <div className="flex top">
-                <h5>{"Dildo"}</h5>
-                <h4>${"50"}</h4>
-              </div>
-              <div className="flex bottom">
-                <div>
-                  <p className="quantity-desc">
-                    <span className="num">{12}</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={c.product}>
-          <div className="product">
-            <img src={""} className="cart-product-image" />
-            <div className="item-desc">
-              <div className="flex top">
-                <h5>{"Dildo"}</h5>
-                <h4>${"50"}</h4>
-              </div>
-              <div className="flex bottom">
-                <div>
-                  <p className="quantity-desc">
-                    <span className="num">{12}</span>
-                  </p>
-                </div>
-              </div>
+            <div className={c.details}>
+              <h3>
+                Item Name: <span>Dilli</span>
+              </h3>
+              <h4>
+                Address: <span>Dilli</span>
+              </h4>
+              <h4>
+                Expected Delivery: <span>Dilli</span>
+              </h4>
+              <h4>
+                Price per item: <span>Dilli</span>
+              </h4>
+              <h4>
+                Number of items: <span>Dilli</span>
+              </h4>
             </div>
           </div>
         </div>

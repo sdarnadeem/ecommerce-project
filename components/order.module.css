@@ -1,5 +1,5 @@
 .product {
-  background-color: white;
+  /* background-color: white; */
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   margin: 20px 0;
@@ -11,4 +11,15 @@
 
 .order h2 {
   color: white;
+}
+
+.details * {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.details * span {
+  /* display: block; */
+  font-weight: 400;
+  font-size: 14px;
 }

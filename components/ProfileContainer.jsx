@@ -14,7 +14,6 @@ const ProfileContainer = () => {
         <Link href="#profile">Profile</Link>
         <p>Logout</p>
       </div>
-      <hr />
       <div className={c.details}>
         <Order />
         <Addresses />
